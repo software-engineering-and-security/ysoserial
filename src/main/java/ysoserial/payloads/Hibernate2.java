@@ -2,6 +2,7 @@ package ysoserial.payloads;
 
 
 import ysoserial.payloads.annotation.Authors;
+import ysoserial.payloads.annotation.Dependencies;
 import ysoserial.payloads.annotation.PayloadTest;
 import ysoserial.payloads.util.JavaVersion;
 import ysoserial.payloads.util.PayloadRunner;
@@ -43,6 +44,8 @@ import com.sun.rowset.JdbcRowSetImpl;
     "restriction"
 } )
 @PayloadTest(harness="ysoserial.test.payloads.JRMPReverseConnectTest", precondition = "isApplicableJavaVersion")
+@Dependencies({"org.hibernate:hibernate-core:5.0.7.Final", "aopalliance:aopalliance:1.0", "org.jboss.logging:jboss-logging:3.3.0.Final",
+    "javax.transaction:javax.transaction-api:1.2"})
 @Authors({ Authors.MBECHLER })
 public class Hibernate2 implements ObjectPayload<Object>, DynamicDependencies {
     public static boolean isApplicableJavaVersion() {

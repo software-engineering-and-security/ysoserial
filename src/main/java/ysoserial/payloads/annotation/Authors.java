@@ -26,6 +26,18 @@ public @interface Authors {
     String JANG = "Jang";
     String ARTSPLOIT = "artsploit";
 
+    String NAVALORENZO = "navalorenzo";
+
+    String SCICCONE = "sciccone";
+
+    String ZEROTHOUGHTS = "zerothoughts";
+
+    String K4n5ha0 = "k4n5ha0";
+
+    String YKOSTER = "ykoster";
+
+    String HUGOW = "hugow";
+
     String[] value() default {};
 
     public static class Utils {

@@ -16,6 +16,7 @@ import org.apache.myfaces.el.unified.FacesELContext;
 import org.apache.myfaces.view.facelets.el.ValueExpressionMethodExpression;
 
 import ysoserial.payloads.annotation.Authors;
+import ysoserial.payloads.annotation.Dependencies;
 import ysoserial.payloads.annotation.PayloadTest;
 import ysoserial.payloads.util.Gadgets;
 import ysoserial.payloads.util.PayloadRunner;
@@ -41,6 +42,7 @@ import ysoserial.payloads.util.Reflections;
  * @author mbechler
  */
 @PayloadTest(skip="Requires running MyFaces, no direct execution")
+@Dependencies({"org.apache.myfaces.core:myfaces-impl:2.2.9", "org.apache.myfaces.core:myfaces-api:2.2.9","org.mortbay.jasper:apache-el:8.0.27", "javax.servlet:javax.servlet-api:3.1.0"})
 @Authors({ Authors.MBECHLER })
 public class Myfaces1 implements ObjectPayload<Object>, DynamicDependencies {
 

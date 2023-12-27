@@ -17,6 +17,7 @@ import org.hibernate.type.Type;
 import org.hibernate.EntityMode;
 
 import ysoserial.payloads.annotation.Authors;
+import ysoserial.payloads.annotation.Dependencies;
 import ysoserial.payloads.annotation.PayloadTest;
 import ysoserial.payloads.util.Gadgets;
 import ysoserial.payloads.util.JavaVersion;
@@ -42,6 +43,8 @@ import ysoserial.payloads.util.Reflections;
  * @author mbechler
  */
 @Authors({ Authors.MBECHLER })
+@Dependencies({"org.hibernate:hibernate-core:5.0.7.Final", "aopalliance:aopalliance:1.0", "org.jboss.logging:jboss-logging:3.3.0.Final",
+    "javax.transaction:javax.transaction-api:1.2"})
 @PayloadTest(precondition = "isApplicableJavaVersion")
 public class Hibernate1 implements ObjectPayload<Object>, DynamicDependencies {
     public static boolean isApplicableJavaVersion() {

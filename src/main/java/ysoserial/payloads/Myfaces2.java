@@ -3,6 +3,7 @@ package ysoserial.payloads;
 
 
 import ysoserial.payloads.annotation.Authors;
+import ysoserial.payloads.annotation.Dependencies;
 import ysoserial.payloads.annotation.PayloadTest;
 import ysoserial.payloads.util.JavaVersion;
 import ysoserial.payloads.util.PayloadRunner;
@@ -30,6 +31,7 @@ import ysoserial.payloads.util.PayloadRunner;
  * @author mbechler
  */
 @PayloadTest(harness="ysoserial.test.payloads.MyfacesTest", precondition = "isApplicableJavaVersion")
+@Dependencies({"org.apache.myfaces.core:myfaces-impl:2.2.9", "org.apache.myfaces.core:myfaces-api:2.2.9","org.mortbay.jasper:apache-el:8.0.27", "javax.servlet:javax.servlet-api:3.1.0"})
 @Authors({ Authors.MBECHLER })
 public class Myfaces2 implements ObjectPayload<Object>, DynamicDependencies {
     public static boolean isApplicableJavaVersion() {
