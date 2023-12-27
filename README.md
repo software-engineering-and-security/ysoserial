@@ -39,6 +39,8 @@ are not responsible or liable for misuse of the software. Use responsibly.
 ```shell
 $  java -jar ysoserial.jar
 Y SO SERIAL?
+Usage: java -jar ysoserial.jar [payload] '[command]'
+  Available payload types:
  Payload              Authors                                Dependencies                                                                                                                                                                                 
      -------              -------                                ------------                                                                                                                                                                                 
      AspectJWeaver        @Jang                                  aspectjweaver:1.9.2, commons-collections:3.2.2                                                                                                                                               
